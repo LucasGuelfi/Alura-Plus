@@ -1,0 +1,57 @@
+:root{
+    --branco-principal:#FFFFFF;
+    --cinza-secundario:#c0c0c0;
+    --botao-azul:#167BF7;
+    --cor-de-fundo:#00030C;
+    --fonte-principal: 'Inter';
+
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.principal{/*se a imagem fizer sentido para o usuario, uar a tag img para colocar o alt(texto alternativo) caso contrario,usar background-image: url/*/
+    background-image: url("./assets/Background.png"); /*imagem de fundo, nao sobrepoe*/
+    background-repeat: no-repeat; /*nao repetir imagem*/
+    background-size: contain;/*tamanho do background, tamanho do container inteiro*/
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; /*ocupando espaços de colunas, no caso 50 de 50*/
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    text-decoration:none;
+    padding: 1em;/*1em medida baeada no tamnho da fonte*/
+    color: var(--branco-principal);
+    display: block;/*ocupar o bloco inteiro, anteriormente estava ocupando pequeno espaço na mesma linha */
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo{
+    font-size:28px ;
+    font-weight: 700;
+}
